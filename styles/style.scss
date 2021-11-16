@@ -7,6 +7,11 @@
     box-sizing: border-box;
   }
 }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@font-face {
+  font-family: "myriad-medium";
+  src: url("../myriadmedium.TTF") format("TTF");
+}
 body {
   padding-top: 150px;
   @media (max-width: 1080px) {
@@ -28,19 +33,36 @@ body {
   align-items: center;
   height: 149px;
   padding: 20px 24px 13.5px 60px;
+  @media (max-width: 1080px) {
+    flex-wrap: wrap;
+    padding: 21px 15px 17px 40px;
+    height: initial;
+  }
+  @media (max-width: 768px) {
+    padding: 15px 10px 16px 15px;
+  }
   & > .img {
     width: 100px;
     height: 100px;
     display: block;
+    @media (max-width: 1080px) {
+      display: none;
+    }
   }
   & > .center {
     flex: 1 0 0;
     padding-left: 40px;
+    @media (max-width: 1080px) {
+      padding-left: 0;
+    }
     & > .list {
       width: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
+      @media (max-width: 1080px) {
+        flex-wrap: wrap;
+      }
       & > .item {
         display: flex;
         flex-direction: column;
@@ -48,21 +70,44 @@ body {
         border-right: 1px solid rgba(255, 255, 255, 0.24);
         margin-right: 20px;
         padding-left: 20px;
+        color: white;
+        &--pink {
+          color: #f27fb4;
+        }
+        @media (max-width: 1080px) {
+          width: 50%;
+          margin-right: 0;
+          &:nth-child(1) {
+            margin-bottom: 26px;
+          }
+          &:nth-child(2) {
+            border-right: 0;
+            margin-bottom: 26px;
+          }
+        }
+        @media (max-width: 540px) {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 26px;
+          border-right: 0;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
         &:last-child {
           border-right: 0;
         }
         & > .value {
           font-size: 24px;
           line-height: 29px;
-          font-family: mont-bold, sans-serif;
-          color: white;
+          font-family: "Montserrat", sans-serif;
+          font-weight: bold;
         }
         & > .title {
           font-size: 16px;
           line-height: 19px;
           font-family: myriad-medium, sans-serif;
           margin-top: 8px;
-          color: white;
         }
       }
     }
@@ -80,7 +125,6 @@ body {
         width: 24px;
         height: 24px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.5);
         margin-right: 8px;
       }
     }
