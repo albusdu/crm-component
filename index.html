@@ -96,8 +96,14 @@
 
         twttr.events.bind('tweet', function(event) {
             alert('clicked');
-            console.log(event)
+            console.log(event.data)
         })
+        twttr.events.bind(
+  'like',
+  function(event) {
+    var likedTweetId = event.data.tweet_id;
+  }
+);
     </script>
     
     
