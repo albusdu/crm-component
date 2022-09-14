@@ -94,9 +94,18 @@
             });
         }(document, "script", "twitter-wjs"));
 
-        twttr.events.bind('click', function(event) {
-            alert('clicked');
-        })
+        twttr.events.bind('tweet', tweetIntentToAnalytics);
+
+        function tweetIntentToAnalytics (intentEvent) {
+            alert('asd')
+            if (!intentEvent) return;
+            var label = "tweet";
+            pageTracker._trackEvent(
+                'twitter_web_intents',
+                intentEvent.type,
+                label
+            );
+        }
     </script>
     
     
