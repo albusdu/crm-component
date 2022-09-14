@@ -104,23 +104,25 @@
 
         // Define our custom event handlers
         function clickEventToAnalytics (intentEvent) {
+            alert('asd')
             console.log(intentEvent+'clcik')
-        if (!intentEvent) return;
-        console.log('tweeted')
-        var label = intentEvent.region;
-        pageTracker._trackEvent('twitter_web_intents', intentEvent.type, label);
+            if (!intentEvent) return;
+            console.log('tweeted')
+            var label = intentEvent.region;
+            pageTracker._trackEvent('twitter_web_intents', intentEvent.type, label);
         }
 
         function tweetIntentToAnalytics (intentEvent) {
+            alert('asd')
             console.log(intentEvent)
-        if (!intentEvent) return;
-        console.log('tweeted')
-        var label = "tweet";
-        pageTracker._trackEvent(
-            'twitter_web_intents',
-            intentEvent.type,
-            label
-        );
+            if (!intentEvent) return;
+            console.log('tweeted')
+            var label = "tweet";
+            pageTracker._trackEvent(
+                'twitter_web_intents',
+                intentEvent.type,
+                label
+            );
         }
 
         function likeIntentToAnalytics (intentEvent) {
