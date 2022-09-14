@@ -78,12 +78,8 @@
             </div>
         </div>
     </div>
-    <a href="print.html"  
-    onclick="window.open('print.html', 
-                         'newwindow', 
-                         'width=300,height=250'); 
-              return false;"
- >Print</a>
+    <button id="open">OPEn</button>
+    <button id="close"></button>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
       
@@ -121,7 +117,9 @@
         //     alert('clicked');
         //     console.log(event.data)
         // })
-    
+            document.getElementById('open').addEventListener('click', function() {
+                window.open('http://google.com', 'googleWindow', 'width=400, height=400, left=200,top=200')
+            })
     </script>
     
     
