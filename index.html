@@ -14,7 +14,16 @@
 </head>
 <body>
     aaa2
-    <a class="twitter popup" href="http://twitter.com/share?url=https://adoring-swartz-426167.netlify.app/?hashtags=example,demo">Tweet</a>
+    <a class="twitter-share-button"
+    href="https://twitter.com/intent/tweet"
+    data-size="large"
+    data-text="custom share text"
+    data-url="https://dev.twitter.com/web/tweet-button"
+    data-hashtags="example,demo"
+    data-via="twitterdev"
+    data-related="twitterapi,twitter">
+  Tweet
+  </a>
 
     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <svg style="display: none">
@@ -81,7 +90,6 @@
                 })
             })
         })
-     $('.popup').click(function(event) { var width = 575, height = 400, left = ($(window).width() - width) / 2, top = ($(window).height() - height) / 2, url = 'https://adoring-swartz-426167.netlify.app/', opts = 'status=1' + ',width=' + width + ',height=' + height + ',top=' + top + ',left=' + left; window.open(url, 'twitter', opts); return false; });
         window.twttr = (function (d, s, id) {
             var t, js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
