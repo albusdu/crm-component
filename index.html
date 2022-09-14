@@ -34,6 +34,16 @@
     <a onclick="window.open(document.URL, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes,popup=true');">
         Share Page
       </a>
+      <a id="url" href="https://www.google.com">myText</a>
+
+<script>
+  document.getElementById("url").addEventListener('click', evt => {
+    evt.preventDefault();
+    let elem = document.getElementById("url");
+    let url = elem.getAttribute("href");
+    window.open(url, "popup", "width=700,height=700");
+  });
+</script>
     <svg style="display: none">
         <symbol xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" id="info-icon">
             <g id="Group_3459" data-name="Group 3459" transform="translate(-416 -457.5)">
