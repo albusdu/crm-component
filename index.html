@@ -78,15 +78,12 @@
             </div>
         </div>
     </div>
-    <a href="https://www.wikipedia.org/" 
-    target="popup" 
-    onclick="window.open('https://www.wikipedia.org/','popup','width=600,height=600'); return false;">
-      Open Link in Popup
-   </a>
-    <a href="https://www.wikipedia.org/" target="OpenWikipediaWindow">
-        Wikipedia, a free encyclopedia (opens in another, possibly already existing,
-        tab)
-      </a>
+    <a href="print.html"  
+    onclick="window.open('print.html', 
+                         'newwindow', 
+                         'width=300,height=250'); 
+              return false;"
+ >Print</a>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
       
@@ -105,31 +102,26 @@
                 })
             })
         })
-        window.twttr = (function (d, s, id) {
-            var t, js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
-            return window.twttr || (t = {
-                _e: [],
-                ready: function (f) {
-                    t._e.push(f)
-                }
-            });
-        }(document, "script", "twitter-wjs"));
+        // window.twttr = (function (d, s, id) {
+        //     var t, js, fjs = d.getElementsByTagName(s)[0];
+        //     if (d.getElementById(id)) return;
+        //     js = d.createElement(s);
+        //     js.id = id;
+        //     js.src = "//platform.twitter.com/widgets.js";
+        //     fjs.parentNode.insertBefore(js, fjs);
+        //     return window.twttr || (t = {
+        //         _e: [],
+        //         ready: function (f) {
+        //             t._e.push(f)
+        //         }
+        //     });
+        // }(document, "script", "twitter-wjs"));
 
-        twttr.events.bind('tweet', function(event) {
-            alert('clicked');
-            console.log(event.data)
-        })
-        twttr.events.bind(
-  'like',
-  function(event) {
-    var likedTweetId = event.data.tweet_id;
-  }
-);
+        // twttr.events.bind('tweet', function(event) {
+        //     alert('clicked');
+        //     console.log(event.data)
+        // })
+    
     </script>
     
     
