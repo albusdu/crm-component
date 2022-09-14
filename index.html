@@ -30,20 +30,7 @@
    Open Link in Popup
 </a> -->
     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=1200,width=1200');return false;">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    
-    <a onclick="window.open(document.URL, '_top', 'location=yes,height=570,width=520,scrollbars=yes,status=yes,popup=true');">
-        Share Page
-      </a>
-      <a id="url" href="https://www.google.com">myText</a>
 
-<script>
-  document.getElementById("url").addEventListener('click', evt => {
-    evt.preventDefault();
-    let elem = document.getElementById("url");
-    let url = elem.getAttribute("href");
-    window.open(url, "popup", "width=700,height=700, popup=1");
-  });
-</script>
     <svg style="display: none">
         <symbol xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" id="info-icon">
             <g id="Group_3459" data-name="Group 3459" transform="translate(-416 -457.5)">
@@ -91,8 +78,27 @@
             </div>
         </div>
     </div>
+
+    <a href="https://www.wikipedia.org/" target="OpenWikipediaWindow">
+        Wikipedia, a free encyclopedia (opens in another, possibly already existing,
+        tab)
+      </a>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
+        let windowObjectReference = null; // global variable
+function openRequestedTab(url, windowName) {
+  if (windowObjectReference === null || windowObjectReference.closed) {
+    windowObjectReference = window.open(url, windowName);
+  } else {
+    windowObjectReference.focus();
+  };
+}
+
+const link = document.querySelector("a[target='OpenWikipediaWindow']");
+link.addEventListener("click", (event) => {
+  openRequestedTab(link.href);
+  event.preventDefault();
+  }, false);
         $(document).ready(function(){
             let titles = ['10,000', '23,000', '200','2,876']
             $('.hide').click(function(){
