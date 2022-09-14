@@ -16,6 +16,7 @@
     aaa2
     <a class="twitter-share-button"
     href="https://twitter.com/intent/tweet"
+    target="iframe_a"
     data-size="large"
     data-text="custom share text"
     data-url="https://adoring-swartz-426167.netlify.app/"
@@ -24,8 +25,8 @@
     data-related="twitterapi,twitter">
   Tweet
   </a>
-
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=1200,width=1200');return false;">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" target="iframe_a" class="twitter-share-button" data-show-count="false" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=1200,width=1200');return false;">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <svg style="display: none">
         <symbol xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" id="info-icon">
             <g id="Group_3459" data-name="Group 3459" transform="translate(-416 -457.5)">
